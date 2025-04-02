@@ -1,0 +1,24 @@
+body{ text-transform: capitalize;
+    font-style: italic;
+     color: antiquewhite;
+    background-image: url(J.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{ 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:xx-large;
+    font-style:italic;
+    text-transform:capitalize;
+    text-align:center;
+    color: blue;
+    background-color: rgb(189, 177, 177);
+
+}
+p{ 
+    text-transform:capitalize;
+   background-color: aquamarine;
+   color: rgb(32, 27, 27);
+   font-style:normal;
+   font-family: 'Times New Roman', Times, serif;
+}
