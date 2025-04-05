@@ -15,3 +15,13 @@ font-style: italic;}
     background-size: contain;
     background-repeat: no-repeat;
 }
+footer{
+position:relative;
+bottom: 0%;
+left: 0%;
+width: 100%;
+background: coral;
+color: black;
+text-align: center;
+padding: 5px;
+}

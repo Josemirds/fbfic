@@ -9,20 +9,26 @@
             text-transform: capitalize;
         
         }
-        #exemplo{text-align: center;}
+        #exemplo{
+            text-align: center;
+        }
         .cx1{
+            width: 15px;
+            height: 25px;
             background-color: rgb(212, 126, 12); /*cor clara visualização*/
             margin: 20px; /* criar espaçamento de 20px em todos os lados*/
             padding: 30px; 
             margin-left: 50px; 
             border: 5px solid brown;
-           width: 100px;
-            border-radius:55%; /*deixa as quinas mais arredondadas*/
+            border: radius 0%; /*deixa as quinas mais arredondadas*/
             display: inline;
             text-align: center;
-            overflow: scroll;
+            overflow: hidden;
+            
         }
         .cx2{
+            width: 300px;
+            height: 20px;
             border: dashed 5px;
             background-color: blueviolet;/*cor clara visualização*/
             margin-top: 50px;/*cria espaçamento acima do texto*/
@@ -31,13 +37,17 @@
             margin-left: 50px;/*cria espaçamento esquerda do texto*/
             padding: 50px;/*cria espaçamento ento a cor de fundo e o texto*/
             display: block;
+            overflow: scroll;
         }
     </style>
 </head>
 <body><header id="exemplo">
     <h1>exemplo: margin</h1></header>
-    <br><br><br><div class="cx1">
+    <br><br><br>
+    <div class="cx1">
         esta div tem margin; 20px em todos os lados.
+            
+
     </div>
     <div class="cx2">
         esta div tem margins diferenciadas.
