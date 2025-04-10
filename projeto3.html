@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto2</title>
+    <style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(18, 119, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;    
+}
+.card img,.card2 img,.card3 img{
+    width:100;
+    height: 200px;
+    object-fit: cover;    
+}
+.card:not(:hover),.card2:not(:hover),.card3:not(:hover){
+    opacity: 0.8;
+}
+.card,.card2,.card3{
+    margin: 10px ;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 16px;
+    box-shadow: 0px 5px 10px #444;
+}
+.card:hover,.card2:hover,.card3:hover{
+    transform: translateY(-10px);
+
+}
+.card-content{
+    padding: 15px;
+    margin: 25px;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    width: 150px;
+    padding: 10px 10px;
+    background-color: rgb(12, 43, 18);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background red 0.5s;
+}
+.btn:hover{
+    background-color:orangered
+
+}
+
+footer{
+            position:fixed;
+            bottom: 0%;
+            left: 0%;
+            width: 100%;
+            background: coral;
+            text-align: center;
+            padding: 5px 5px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="iati1.jpg" alt="iati basico">
+            <div class="card-content">
+                <h3>Plano basico</h3>
+                <p>Ideal para Lisos.</p>
+                <a href="coleta.html" class="btn">Assinar</a>
+            </div>
+        </div> 
+    </div>             
+            <div class="card2">
+                <img src="iati2.jpg" alt="iati intermediario">
+                <div class="card-content">
+                    <h3>Plano intermediario</h3>
+                    <p>Ideal para Você.</p>
+                    <a href="coleta.html" class="btn">Assinar</a>
+                </div>
+            </div>            
+                <div class="card3">
+                    <img src="iati3.jpg"alt="topado">
+                    <div class="card-content">
+                        <h3>Plano completo</h3>
+                        <p>Ideal para sua familia.</p>
+                        <a href="coleta.html" class="btn">Assinar</a>
+                    </div>
+                </div> 
+               
+     
+        <footer class="">
+            &copy;2025, Criado Por Jotamir.
+        </footer>
+   
+</body>
+</html>
