@@ -1,0 +1,128 @@
+/* o *+espaço muda geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*estilo do corpo*/ 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(87, 109, 77);
+    color: black;
+}
+/*cabeçalho de navegação*/
+header{
+    background-color:rgba(7, 39, 20, 0.514);
+    padding: 10px 0;
+}
+header nav ul{
+    list-style: none;
+    text-align: center;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+header nav ul li a:hover{
+    color: rgb(15, 15, 14);
+}
+/* estilização do da sessao inicio*/
+.ini-section{
+    text-align: center;
+    color: black;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.ini-section h1{
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+.ini-section p{
+    font-size: 15px;
+    margin-bottom: 0;
+    max-width: 600px;
+    line-height: 1.5;
+}
+.cta-button{
+    background-color: #8973eb4d;
+    color: rgb(4, 8, 8);
+    padding: 8px 15px; 
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.6s;
+}
+.cta-button:hover{
+    background-color: aquamarine;
+    transition: step-end 0.1s;
+}   
+
+/* sessão sobre nós*/
+.sobre-section{
+    background-color: #eb73a54d;
+    padding: 15px 15px;
+    text-align: center;
+}
+.sobre-section h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobre-section p{
+    font-size: 18px;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin: 0 auto 20px auto ;
+    line-height: 1.5;
+}
+/*sessao dos cards*/
+#serviços{
+    background-color: #0f1f0d4d;
+    padding: 20px 15px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.card{
+    background-color: brown;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 8px black;
+    cursor: pointer;
+    transition: transform 1.05s;
+    margin-top: 25px;
+}
+.card img{
+    padding: 7px 7px;
+    width: 210px;
+    height: 150px;
+}
+.card:hover{
+    transform: scale(1.12);
+    box-shadow: 10px 14px 18px;
+    background-color: aqua ;
+}
+.card h3{
+    font-size: 20px;
+}
+.card p{
+    font-size: 14px;
+
+}
+.card p preco{
+    font-size: 100px;
+}
