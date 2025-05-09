@@ -12,21 +12,22 @@
 </head>
 <body>
 
-  <h1 id="titulo">Altera Título</h1>
-  <button class="botao" onclick="trocarTitulo()", onchange="trocarTitulo1">Trocar Título</button>
+  <h1 id="titulo">Titulo Da Postagem</h1>
+  <button onclick="trocarTitulo()">Trocar Título</button>
 
-  <script>
+  <script> 
+  
+  
     function trocarTitulo() {
-      let novoTitulo = 'Novo Título da Postagem';
-      let tituloElemento = document.getElementById('titulo');
-      tituloElemento.textContent = novoTitulo;
+    let titulo1 = document.getElementById('titulo');
+    let novoTitulo = 'Novo Título da Postagem';
+    let tituloElemento = "Titulo Da Postagem"
 
     }
-    
-    function trocarTitulo1() {
-      let novoTitulo = document.getElementById('Novo Título da Postagem');
-      let tituloElemento = ('titulo');
-      novoTitulo.textContent = tituloElemento;
+    if(titulo.textContent == tituloElemento){
+      titulo.textContent = novoTitulo;
+    }else{
+      titulo.textContent = tituloElemento;
     }
   </script>
 

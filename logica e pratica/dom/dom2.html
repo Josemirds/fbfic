@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #usuarioNome{
+            text-shadow: 20px;
+            color: red;}
+            
+        
+    </style>
+</head>
+<body>
+    
+
+<h1>Bem Vindo <span id="usuarioNome" > </span></h1>
+<button id="Butao" onclick="adicionarNome()">Entrar</button>
+
+<script>
+let pessoa = prompt('Digite seu nome!')
+
+function adicionarNome(){
+let titulo = document.getElementById('usuarioNome')
+
+titulo.textContent = pessoa
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
