@@ -16,8 +16,6 @@
   <button onclick="trocarTitulo()">Trocar Título</button>
 
   <script> 
-  
-  
     function trocarTitulo() {
     let titulo1 = document.getElementById('titulo');
     let novoTitulo = 'Novo Título da Postagem';

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="listaLinks">
+
+    </div>
+    <button onclick="adicionarLinks()">Click aqui </button>
+
+    <script>
+        function adicionarLinks(){
+            let  lista = document.getElementById('listaLinks')
+            lista.innerHTML = '<ul><li><a href="https://www.google.com.br/">Google</a></li><li><a href="https://www.gmail.com.br/">Gmail</a></li><li><a href="https://www.github.com.br/">Github</a></li></ul>'
+            
+        }
+    </script>
+</body>
+</html>
