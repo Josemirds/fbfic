@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nomeFulano">
+        <h1>Bem Vindo</h1>
+    </div>
+    
+    <input type="text" id="nomeDoFulano" placeholder="Digite Seu Lindo Nome">
+    <button onclick="chamarFulano()">Entrar</button>
+
+    <script>
+        function chamarFulano() {
+            // Pega o valor digitado no input
+            let nome = document.getElementById('nomeDoFulano').value;
+
+            // Altera o conteúdo do div com o novo nome
+            document.getElementById('nomeFulano').innerHTML = `<h1>Bem Vindo, ${nome}</h1>`;
+        }
+    </script>
+</body>
+</html>
