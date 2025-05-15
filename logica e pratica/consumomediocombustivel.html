@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let consumo = parseFloat(prompt('digite quanto de Combustivel'))
+        let distancia = parseFloat(prompt('digite a distancia total em KM'))
+        function calcularConsumo(distancia,consumo){
+            return distancia/ consumo
+        };
+    
+        alert('a distantia informada foi de: '+ distancia +
+        'qntidade de combustivel informado foi de: '+ consumo +
+        'sendo assim a media foi de: '+ calcularConsumo(distancia,consumo))
+    </script>
+</body>
+</html>

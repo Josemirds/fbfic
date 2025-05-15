@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>VERIFICAR HORÁRIO COMERCIAL</h1>
+   
+   <script>
+    let i = parseInt(prompt('digite o horario atual'));
+
+    function verificaHorario(horarioComercial) {
+        if (horarioComercial >= 8 && horarioComercial <= 18) {
+            return 'loja aberta';
+        } else {
+            return 'loja fechada';
+        }
+    }
+
+    let resultado = verificaHorario(i);
+    alert(resultado); 
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular conta dividido entre amigos</h1>
+    <script>
+        let dinheiro = parseInt(prompt('digite o valor da conta'))
+        let pessoas = parseInt(prompt('digite quantidade de pessoas pagantes'))
+        function calcularContaTotal(valor){
+            return valor *1.1;
+        }
+        console.log('Total a Pagar:',dinheiro);
+        console.log('Total por Pessoa:',calcularContaTotal(dinheiro/pessoas));
+    </script>
+</body>
+</html>
