@@ -11,16 +11,14 @@
     <script>
         let hora = parseInt(prompt('Digite o horário em que você vai dormir (0 a 23):'));
     
-        function despertadorInteligente(hora) {
-            return (hora + 8) % 24; // Garante que o resultado fique entre 0 e 23
+        function despertadorInteligente(hora) {return (hora + 8) % 24; // Garante que o resultado fique entre 0 e 23
         }
     
-        if (hora >= 0 && hora <= 23) {
-            let horaDespertar = despertadorInteligente(hora);
-            alert('Você deve acordar às ' + horaDespertar + ' horas.');
-        } else {
-            alert('Por favor, insira uma hora válida entre 0 e 23.');
-        }
+        if (hora >= 0 && hora <= 23) {let horaDespertar = despertadorInteligente(hora);
+            
+            alert('Você deve acordar às ' + horaDespertar + ' horas.');} 
+
+        else {alert('Por favor, insira uma hora válida entre 0 e 23.');}
     </script>
 </body>
 </html>

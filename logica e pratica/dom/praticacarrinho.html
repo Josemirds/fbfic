@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bem vindo a <strong>Nova ERA</strong></h1>
+
+    <p id ="quantidadeCarrinho">Quantidade de itens no carrinho = 0</p>
+
+    <button onclick="adicionarItem()">+</button>
+    <button onclick="removerItem()">-</button>
+    <button onclick="zeraCarrinho()">Zerar</button>
+    <script>
+        let quantidade  = 0;
+
+        function atualizarCarrinho(){
+            let carrinho = document.getElementById('quantidadeCarrinho')
+            carrinho.textContent = 'quantidade de itens = ' + quantidade; 
+        }
+        function adicionarItem(){
+            quantidade += 1;
+        atualizarCarrinho();
+        }
+
+        function removerItem(){
+        if (quantidade > 0) {
+        quantidade -= 1;
+        }
+        atualizarCarrinho();    
+        }
+        function zeraCarrinho(){
+            quantidade = 0
+            atualizarCarrinho();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumento Contínuo</title>
+</head>
+<body>
+    <p id="fonteFonte">Seja Bem-Vindo ao mundo do SONO!!!</p>
+
+    <button onclick="mudarTamanho()" id="mudar">Mudar</button>
+    <button onclick="mudarTamanho1()" id="mudar1">Voltar</button>
+    <button onclick="iniciarAumento()">Aumentar Continuamente</button>
+    <button onclick="pararAumento()">Parar</button>
+
+    <script>
+        let intervalo;
+        let tamanhoAtual = 16; // valor inicial da fonte (em px)
+
+        function mudarTamanho() {
+            let fonte = document.getElementById('fonteFonte');
+            let botao = document.getElementById('mudar');
+            fonte.style.fontSize = "50px";
+            botao.style.border = "4px solid";
+        }
+
+        function mudarTamanho1() {
+            let fonte = document.getElementById('fonteFonte');
+            let botao = document.getElementById('mudar');
+            fonte.style.fontSize = "16px";
+            botao.style.border = "";
+            tamanhoAtual = 16; // reseta o tamanho
+        }
+
+        function iniciarAumento() {
+            let fonte = document.getElementById('fonteFonte');
+
+            // Pega o valor atual da fonte, se for a primeira vez
+            if (!fonte.style.fontSize) {
+                fonte.style.fontSize = tamanhoAtual + "px";
+            }
+
+            intervalo = setInterval(() => {
+                tamanhoAtual += 1;
+                fonte.style.fontSize = tamanhoAtual + "px";
+            }, 100); // aumenta a cada 100ms
+        }
+
+        function pararAumento() {
+            clearInterval(intervalo);
+        }
+    </script>
+</body>
+</html>

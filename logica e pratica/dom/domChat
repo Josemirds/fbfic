@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alterar Título</title>
+  <style>
+    .botao {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo">Titulo Da Postagem</h1>
+  <button onclick="trocarTitulo()">Trocar Título</button>
+
+  <script> 
+    function trocarTitulo() {
+    let titulo1 = document.getElementById('titulo');
+    let novoTitulo = 'Novo Título da Postagem';
+    let tituloElemento = "Titulo Da Postagem"
+
+    }
+    if(titulo.textContent == tituloElemento){
+      titulo.textContent = novoTitulo;
+    }else{
+      titulo.textContent = tituloElemento;
+    }
+  </script>
+
+</body>
+</html>

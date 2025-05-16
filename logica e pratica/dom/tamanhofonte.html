@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: rgb(0, 0, 0);
+            height: 100%;
+            width: 100%;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <p id="fonteFonte" > Seja Bem Vindo ao mundo do SONO!!!</p>
+    <button onclick="mudarTamanho()" id="mudar">mudar</button>
+    <button onclick="mudarTamanho1()" id="mudar1">Voltar</button>
+    <script>
+        let tamanhoAtual= 10
+        function mudarTamanho(){
+            let fonte = document.getElementById('fonteFonte')
+            let claroEscuro = document.getElementById('fonteFonte')
+            tamanhoAtual += 3
+            fonte.style.fontSize = tamanhoAtual+"px"
+            claroEscuro.classList.toggle('body');  
+        }
+          function mudarTamanho1(){
+            let fonte = document.getElementById('fonteFonte')
+            let botao = document.getElementById('mudar')
+            fonte.style.fontSize = tamanhoAtual-- +"px"
+                      
+        }
+
+    </script>
+</body>
+</html>
