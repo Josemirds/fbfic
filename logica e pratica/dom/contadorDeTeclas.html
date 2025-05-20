@@ -21,24 +21,36 @@
 <h2>exercicio eventos</h2>
 <button id="botao">VAMOS SIMBORA!!!!</button>
 <p id="mensagemTempoReal"></p>
+
+<!-- Adicionando o campo de entrada e o contador -->
+<input type="text" id="campoTexto" placeholder="Digite algo aqui...">
+<p>Teclas pressionadas: <span id="contador">0</span></p>
+
 <script>
     let clickUm = document.getElementById('botao')
-    let clickDois =document.getElementById('botao')
+    let clickDois = document.getElementById('botao')
+    let mensagemTempoReal = document.getElementById('mensagemTempoReal')
+    let corpo = document.getElementById('corpo')
 
     clickUm.addEventListener('click', function(){
         mensagemTempoReal.textContent = 'Clique Realizado'
         corpo.style.backgroundColor = 'aquamarine'
     });
     clickDois.addEventListener('dblclick', function(){
-          mensagemTempoReal.textContent = 'Duplo Clique Realizado';
-           corpo.style.backgroundColor = 'black'
-        });
+        mensagemTempoReal.textContent = 'Duplo Clique Realizado';
+        corpo.style.backgroundColor = 'black'
+    });
 
+   
+    let campoTexto = document.getElementById('campoTexto');
+    let contador = document.getElementById('contador');
+    let contadorTeclas = 0;
+
+    campoTexto.addEventListener('keyup', function() {
+        contadorTeclas++;
+        contador.textContent = contadorTeclas;
+    });
 </script>
-
-
-
-
 
 </body>
 </html>
