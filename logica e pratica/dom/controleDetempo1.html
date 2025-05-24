@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora atual</title>
+    <style>
+        body{
+            background-color: #48427e;
+            font-family: Arial, sans-serif;
+        }   
+        #caixa {
+            width: 360px;
+            height: 200px;
+            background-color: #972424;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 250px auto;
+            
+        }
+        #caixa:hover {
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }   
+    </style>
+</head>
+<body>
+    <div id="caixa">
+    <h1>Hora Atual: <span id="hora"> </span> </h1>
+    </div>
+    <script>
+        let intervalo =setInterval(() => {
+            let hotaAtual = new Date();
+            document.getElementById("hora").textContent = hotaAtual.toLocaleTimeString();
+        })
+    </script>
+</body>
+</html>

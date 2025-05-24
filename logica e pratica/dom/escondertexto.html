@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esconder texto</title>
+</head>
+<body>
+    <h1>desaparecer no botao</h1>
+    <button id="botao">Desaparecer</button>
+    <p id="texto">meu texto ja esta aparecendo  </p>
+
+<script>
+document.getElementById("botao").addEventListener("click", function() {
+    setTimeout(function() {
+        document.getElementById("texto").style.display = "none";
+    }, 5000);
+}); 
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeout</title>
+    <style>
+        body{
+            background-color: #9e7070;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>set timeout</h1>
+    <p id ="mensagem">Esse é um exemplo de como usar o setTimeout para executar uma função após um determinado tempo.</p>
+
+<button id="botao" onclick="showAlert()">Clique aqui</button>
+
+
+    <script>document.getElementById("botao").addEventListener("click", function { setTimeout(function() {
+        document.getElementById("mensagem").textContent = "Você clicou no botão!";
+    },3000);
+
+});  
+    </script>
+</body>
+</html>

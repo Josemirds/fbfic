@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time de cozinha</title>
+    <style>
+        body {
+
+            margin-top: 10%;
+            background-color: rgb(63, 56, 56);
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        #container {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 360px;
+            margin: auto;
+            border: 1px solid #050303;
+        }
+        #caixa {
+            width: 400px;
+            height: 100px;
+            background-color: #ffffff;
+            border: 1px solid #050303;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+        #contador {
+            font-size: 25px;
+            color: red;
+        }
+        #iniciar {
+            background-color: rgb(34, 87, 148);
+            color: 'black';
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #iniciar:hover {
+            background-color: rgb(34, 87, 148);
+            color: rgb(255, 255, 255);
+        }
+        #tempo {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #050303;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>TEMPO DE COZIMENTO</h1>
+        <input type="text" id="tempo" placeholder="Digite o tempo em segundos">
+        <button onclick="intervalo" id="iniciar">Iniciar</button>
+        <p>Tempo Restante: <span id="contador">Aqui</span></p>
+    </div>
+    <div id="caixa">
+    <h1>Hora Atual: <span id="hora"> </span> </h1>
+    </div>
+    <script>
+        let intervalo =setInterval(() => {
+            let hotaAtual = new Date();
+            document.getElementById("hora").textContent = hotaAtual.toLocaleTimeString();
+        })
+    </script>
+    <script>
+        document.getElementById("iniciar").addEventListener("click", function() 
+        {
+            let tempo = document.getElementById("tempo").value;
+            let contador = tempo
+            let intervalo = setInterval(function() {
+            document.getElementById("contador").textContent = contador;
+                contador--;
+                if (contador < 0 ) {
+                    clearInterval(intervalo);
+                    alert("O tempo de cozimento acabou!");
+                }
+            }, 1000)});
+
+        let intervalo1 = setInterval(() => {
+        if(document.body.style.backgroundColor === "red"){document.body.style.backgroundColor = "blue"}
+        else{document.body.style.backgroundColor = "red";}
+        trocas++
+        if(trocas >= 1000){
+            clearInterval(intervalo1);
+            
+        alert("trocas acabaram")
+        }
+        }, 50);
+    </script>
+    
+</body>
+</html>

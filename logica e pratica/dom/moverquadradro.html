@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quadrado se mexendo</title>
+    <style>
+        #quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado"> </div>
+
+    <script>
+        let posicao = 0
+        let quadrado = document.getElementById("quadrado");
+        
+        let intervalo = setTimeout(() => {
+            posicao += 500;
+            quadrado.style.left = posicao + "px"
+
+            if(posicao >= 500){
+                clearInterval(intervalo);
+            }
+
+
+
+
+        }, 2000);
+                    
+        </script>
+        <script>
+    let trocas = 0
+    let intervalo2 = setInterval(() => {
+        if(document.body.style.backgroundColor === "red"){document.body.style.backgroundColor = "blue"}
+        else{document.body.style.backgroundColor = "red";}
+        trocas++
+        if(trocas >= 10000){
+            clearInterval(intervalo2);
+            
+        alert("trocas acabaram")
+        }
+    }, 50); 
+    </script>
+</body>
+</html>
