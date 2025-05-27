@@ -1,9 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarme</title>
+    <style>
+        #botao {
+            padding: 10px 20px;
+            background-color: aquamarine;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>ALARME</h1>
@@ -29,8 +38,7 @@
                     clearInterval(intervalo);
                     document.getElementById("texto").textContent = "Não se esqueça da sua reunião!";
                 }
-              
-            }, 5000);
+            }, 1000);
         });
     </script>
 </body>

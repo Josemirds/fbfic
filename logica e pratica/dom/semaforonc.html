@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+    <style>
+        #semaforo {
+            width: 60px;
+            height: 180px;
+            background-color: rgb(36, 37, 37);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .luz {
+            width: 40px;
+            height: 40px;  
+            border-radius: 50%;
+            background-color: #444;
+            margin: auto;
+        }
+        .vermelho { background-color: red; }
+        .amarelo { background-color: yellow; }
+        .verde { background-color: green; }
+
+        button { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div id="semaforo">
+        <div class="luz" id="vermelho"></div>
+        <div class="luz" id="amarelo"></div>
+        <div class="luz" id="verde"></div> 
+    </div>   
+    <button id="btn-Iniciar">Iniciar!</button> 
+
+    <script>
+        const luzVermelho = document.getElementById("vermelho");
+        const luzAmarelo = document.getElementById("amarelo");
+        const luzVerde = document.getElementById("verde");
+        let intervalo;
+
+        function apagarTodas(){
+            luzVermelho.className = "luz";
+            luzAmarelo.className = "luz";
+            luzVerde.className = "luz";
+        }
+
+        function cicloSemaforo() {
+            apagarTodas();
+            luzVerde.classList.add("verde");
+            setTimeout(() => {
+                apagarTodas();
+                luzAmarelo.classList.add("amarelo");
+            }, 2000);
+            setTimeout(() => {
+                apagarTodas();
+                luzVermelho.classList.add("vermelho");
+            }, 4000);
+        }
+
+        document.getElementById("btn-Iniciar").addEventListener("click", function(){
+            if (!intervalo) {
+                cicloSemaforo(); // iniciar o primeiro ciclo imediatamente
+                intervalo = setInterval(cicloSemaforo, 6000); // repetir a cada 6 segundos
+            }
+        });
+    </script>
+</body>
+</html>

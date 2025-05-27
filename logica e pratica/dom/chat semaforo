@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semáforo em Loop</title>
+  <style>
+    #semaforo {
+      width: 60px;
+      height: 180px;
+      background-color: rgb(36, 37, 37);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .luz {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #444;
+    }
+
+    .vermelho {
+      background-color: red;
+    }
+
+    .amarelo {
+      background-color: yellow;
+    }
+
+    .verde {
+      background-color: green;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="semaforo">
+    <div class="luz" id="vermelho"></div>
+    <div class="luz" id="amarelo"></div>
+    <div class="luz" id="verde"></div>
+  </div>
+  <button id="btn-Iniciar">Iniciar!</button>
+
+  <script>
+    const luzVermelho = document.getElementById("vermelho");
+    const luzAmarelo = document.getElementById("amarelo");
+    const luzVerde = document.getElementById("verde");
+    let intervalo;
+    function apagarTodas() {
+      luzVermelho.className = "luz";
+      luzAmarelo.className = "luz";
+      luzVerde.className = "luz";
+    }
+    function iniciarSemaforo() {
+      let etapa = 0;
+      intervalo = setInterval(() => {
+        apagarTodas();
+        if (etapa === 0) {
+          luzVerde.classList.add("verde");
+        } else if (etapa === 1) {
+          luzAmarelo.classList.add("amarelo");
+        } else if (etapa === 2) {
+          luzVermelho.classList.add("vermelho");
+        }
+        etapa = (etapa + 1) % 3; // Reinicia para 0 depois de 2
+      }, 2000); // Muda a luz a cada 2 segundos
+    }
+    document.getElementById("btn-Iniciar").addEventListener("click", function () {
+      if (!intervalo) {
+        iniciarSemaforo();
+      }
+    });
+  </script>
+</body>
+</html>

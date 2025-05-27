@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Semáforo</title>
+  <style>
+    .semaforo {
+      width: 60px;
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .luz {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #444;
+      opacity: 0.3;
+      transition: background 0.3s, opacity 0.3s;
+    }
+    .luz.vermelho.acesa { background: red; opacity: 1; }
+    .luz.amarelo.acesa { background: yellow; opacity: 1; }
+    .luz.verde.acesa { background: green; opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="semaforo">
+    <div class="luz vermelho"></div>
+    <div class="luz amarelo"></div>
+    <div class="luz verde"></div>
+  </div>
+  <button id="iniciar">Iniciar Semáforo</button>
+
+  <script>
+    const luzes = document.querySelectorAll('.luz');
+    const btn = document.getElementById('iniciar');
+    let interval = null;
+    let estado = 0; // 0: vermelho, 1: amarelo, 2: verde
+
+    function mostrarLuz(indice) {
+      luzes.forEach((luz, i) => {
+        luz.classList.toggle('acesa', i === indice);
+      });
+    }
+
+    function cicloSemaforo() {
+      mostrarLuz(estado);
+      estado = (estado + 1) % 3;
+    }
+
+    btn.addEventListener('click', () => {
+      if (interval) return; // Evita múltiplos intervalos
+      cicloSemaforo(); // Mostra a primeira luz imediatamente
+      interval = setInterval(cicloSemaforo, 1000);
+    });
+  </script>
+</body>
+</html>
