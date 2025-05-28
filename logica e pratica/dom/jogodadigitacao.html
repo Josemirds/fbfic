@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Digitação</title>
+    <link rel="stylesheet" href="jogodedigitaçao.css">
+</head>
+<body>
+    <h1>Jogo de Digitação</h1>
+    <p>Digite o texto abaixo o mais rápido possível!</p>
+
+    <p id="textoOriginal">
+        Joana caminhava pela praia ao entardecer. O vento soprava suave, e as ondas dançavam ao som tranquilo do mar sereno.
+    </p>
+
+    <input type="text" id="textoDigitado" placeholder="Digite o texto aqui...">
+    <p id="resultado"></p>
+
+    <h2>Tempo: <span id="contador">0</span> segundos</h2>
+    <button id="reiniciar">Reiniciar</button>
+
+    <script>
+        // Pegando os elementos da página
+        const textoOriginal = document.getElementById("textoOriginal").textContent.trim();
+        const textoDigitado = document.getElementById("textoDigitado");
+        const resultado = document.getElementById("resultado");
+        const contador = document.getElementById("contador");
+        const botaoReiniciar = document.getElementById("reiniciar");
+
+        // Variáveis de controle
+        let tempo = 0;
+        let tempoIniciado = false;
+        let intervalId;
+
+        // Inicia o cronômetro
+        function iniciarTempo() {
+            tempoIniciado = true;
+            intervalId = setInterval(() => {
+                tempo++;
+                contador.textContent = tempo;
+            }, 1000);
+        }
+
+        // Reinicia o jogo
+        function reiniciarJogo() {
+            clearInterval(intervalId);
+            tempo = 0;
+            tempoIniciado = false;
+            textoDigitado.value = '';
+            resultado.textContent = '';
+            contador.textContent = '0';
+        }
+
+        // Verifica a digitação
+        textoDigitado.addEventListener('input', () => {
+            if (!tempoIniciado) {
+                iniciarTempo();
+            }
+
+            if (textoDigitado.value === textoOriginal) {
+                clearInterval(intervalId);
+                resultado.textContent = `Parabéns! Você digitou o texto em ${tempo} segundos.`;
+                tempoIniciado = false;
+            }
+        });
+
+        // Evento do botão Reiniciar
+        botaoReiniciar.addEventListener('click', reiniciarJogo);
+    </script>
+</body>
+</html>
