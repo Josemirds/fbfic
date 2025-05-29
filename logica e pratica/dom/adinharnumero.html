@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adivinhe o numero</title>
+    <style>
+        body{
+            margin: 0%;
+            background-color: rgb(86, 99, 62);
+            justify-content: center;           
+            display: flex;
+            text-align: center;
+        }
+    #game-conteiner{
+        width: auto;
+        height: auto;
+        padding: 5%;
+        background-color: rgb(221, 199, 199);
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    input[type="number"]{
+        padding: 10px;
+        font-size: 18px;
+        width: 90%;
+        border-radius: 7px;
+        border: none;
+    }
+    #btn{
+        padding: 5px;
+        font-size: 15px;
+        background-color: brown;
+        color: azure;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="game-conteiner">
+        <h1>Adivinhe o número</h1>
+        <p>Digite o numero entre 1 e 100</p>
+        <input type="number" min="1" max="100"><br>
+        <button id="btn">Arriscar</button><br>
+        <p></p>
+    </div>
+    <div id="resultado"></div>
+    
+    <script>
+let trocas = 0
+    let intervalo = setInterval(() => {
+        if(document.body.style.backgroundColor === "red"){document.body.style.backgroundColor = "blue"}
+        else{document.body.style.backgroundColor = "red";}
+        trocas++
+        if(trocas >= 100000){
+            clearInterval(intervalo);
+            
+        alert("trocas acabaram")
+        }
+    }, 50); 
+
+    let numeroSecreto;
+
+    function iniciarJogo(){
+        numeroSecreto = math.floor(Math.random() * 100)
+    }
+
+    </script>
+</body>
+</html>
