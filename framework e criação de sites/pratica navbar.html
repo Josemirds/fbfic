@@ -48,7 +48,20 @@
 <div id="liveAlertPlaceholder"></div>
 <button type="button" class="btn btn-primary" id="liveAlertBtn">Click Aqui</button>
 </div>
-</header>    
+</header> 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 //botao de alerta//
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
@@ -59,11 +72,9 @@ const appendAlert = (message, type) => {
     `   <div>${message}</div>`,
     '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
     '</div>'
-  ].join('')
-
+  ].join('d')
   alertPlaceholder.append(wrapper)
 }
-
 const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
