@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>troca de Cor</title>
+</head>
+<body>
+
+<h1>Bem VIndo</h1>
+<a href="pratica site.html">VOLTAR</a>
+    <script>
+    let trocas = 0
+    let intervalo = setInterval(() => {
+        if(document.body.style.backgroundColor === "red"){document.body.style.backgroundColor = "blue"}
+        else{document.body.style.backgroundColor = "red";}
+        trocas++
+        if(trocas >= 10000){
+            clearInterval(intervalo);
+            
+        alert("trocas acabaram")
+        }
+    }, 50); 
+    </script>
+</body>
+</html>
